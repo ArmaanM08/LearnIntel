@@ -1,0 +1,508 @@
+/* ---------------FRONT PAGE STYLING------------------ */
+body {
+    font-family: 'Arial', sans-serif; /* Choose a web-safe font */
+    margin: 0;
+    line-height: 1.6; /* Improve readability */
+    /*background-image: url("/Users/armaanmulani/Desktop/LearnIntel/Resources/ws-bg.jpg");Replace with your image
+    background-size: cover;
+    background-attachment: fixed; This makes the background fixed */
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-weight: 600; /* Less bold for a softer look */
+}
+
+/* Header */
+header {
+    background-color: #f0f0f0;
+    padding: 2rem 0; /* Increased padding */
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+
+/* Header Animation */
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%); /* Start off-screen to the left */
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0); /* Slide to its normal position */
+      opacity: 1; 
+    }
+  }
+  
+  header h1 {
+    font-family: 'Trebuchet MS', sans-serif; /* More interesting font */
+    font-size: 2.5rem; /* Larger font size */
+    font-weight: 600;
+    color: #333; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 1rem; /* Add spacing below */
+    animation-name: slideInFromLeft;
+    animation-duration: 1s; 
+    animation-delay: 0.5s; 
+    animation-fill-mode: forwards;
+  }
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; 
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 1.5rem; 
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease; /* Smooth color transition */
+}
+
+nav a:hover {
+    color: #007bff; /* Example link hover color */
+}
+/* Header Styling */
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Position items on opposite ends */
+    align-items: center; /* Align vertically in the center */
+}
+/* Style the login button */
+.login-button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff; /* Example button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline from link */
+    cursor: pointer;
+    transition: background-color 0.2s ease; /* Smooth transition */
+  }
+  
+  .login-button:hover {
+    background-color: #0062cc; /* Darker color on hover */
+  }
+
+/* Hero Section */
+.hero {
+    background-image: url("/Users/armaanmulani/Desktop/LearnIntel/Resources/ws-bg.jpg"); /* Replace with your image */
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    color: white;
+    padding: 7rem 0; /* More spacing */
+    position: relative; /* For overlay */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+}
+
+.hero-content {
+    position: relative; 
+    z-index: 2; 
+    animation: fadeInUp 1s ease forwards;
+}
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); 
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.hero-content h2 {
+    animation-delay: 0.3s; /* Slight delay for h2 */
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+.hero-content p {
+    animation-delay: 0.6s; /* More delay for paragraph */
+}
+
+.hero button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    background-color: #007bff; /* Example button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease; /* Smooth transition */
+}
+.hero-content button {
+    animation-delay: 0.9s; /* Most delay for button */
+}
+
+.hero button:hover {
+    background-color: #0062cc; /* Darker button color on hover */
+}
+
+/* Courses Section */
+.courses {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.course-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.course {
+    width: 300px; /* Adjust course card width */
+    margin: 1rem;
+    border: 1px solid #ddd; 
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+.course img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; 
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+
+
+/* -------------Login Page Styles ------------------*/
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; /* Occupy most of the viewport height */
+    text-align: center;
+}
+
+#login-form {
+    width: 300px;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#login-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#login-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#login-form button {
+    padding: 0.8rem 1.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.signup-link {
+    margin-top: 1rem;
+}
+
+/*-------------------Courses Design-------------------*/
+.courses-page {
+    padding: 5rem 0; /* Add spacing around the courses */
+    text-align: center;
+  }
+  
+  .courses-container {
+    max-width: 900px; 
+    margin: 0 auto; 
+    padding: 0 1rem; 
+}
+  
+  .courses-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease forwards; /* Add animation to the heading */
+}
+  
+  /* Course Grid Styling (adjust as needed) */
+  .course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust 200px as needed */
+    grid-gap: 2rem;  
+  }
+  
+  .course {
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 5px;
+    text-align: left; 
+    transition: transform 0.3s ease; /* Add transition for transform only */
+  }
+
+  .course:hover {
+    transform: scale(1.1); /* Slide up on hover */
+  }
+  
+  .course img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; 
+    margin-bottom: 1rem; 
+  }
+  
+  .learn-more {
+    display: inline-block; /* Make it look like a button */
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease; 
+  }
+  
+  .learn-more:hover {
+    background-color: #0062cc;
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); 
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /*-------------------Contact Page Design-------------------*/
+  /* ... your existing styles ... */
+
+/* Contact Page */
+.contact-page {
+    padding: 5rem 0;
+    text-align: center;
+  }
+  
+  .contact-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9; 
+  }
+  .contact-container h2 { /* Improved heading */
+    font-size: 2.8rem; 
+    margin-bottom: 2rem;
+  }
+  
+  .contact-methods {
+    display: flex;
+    justify-content: space-around; 
+    margin-bottom: 3rem;
+  }
+  
+  .contact-method {
+    text-align: center; 
+  }
+  
+  .social-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+  }
+  
+  .social-links li {
+    margin: 0 1rem; 
+  }
+  
+  .social-links a {
+    font-size: 1.5rem; 
+    color: #333; 
+    transition: color 0.2s ease;
+  }
+  
+  .social-links a:hover {
+    color: #007bff; 
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%; 
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .contact-form button {
+    padding: 0.8rem 1.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0062cc;
+  }
+  @media (max-width: 768px) { 
+    .contact-container {
+      max-width: 95%; 
+      padding: 1.5rem; 
+    }
+  
+    .contact-methods {
+      flex-direction: column; 
+      align-items: center;
+    }
+  
+    .contact-method {
+      margin-bottom: 1.5rem; 
+    }
+  }
+  
+  /*-------------------About Page Design-------------------*/
+.about-hero {
+    background-image: url("ai-background.jpg"); /* Replace with relevant image */
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    color: white;
+    padding: 7rem 0; 
+    position: relative; 
+}
+
+.about-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+.about-hero-content {
+    position: relative; 
+    z-index: 2; 
+    animation: fadeInUp 1s ease forwards; 
+}
+
+
+.about-content {
+    padding: 5rem 0;
+}
+
+.about-content .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+}
+
+.about-content .container:nth-child(even) { /* Reverse elements for every other container */
+    flex-direction: row-reverse;
+}
+
+.content-left, .content-right {
+    flex: 1;
+    padding: 0 2rem;
+    text-align: left;
+}
+
+.content-left img, .content-right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+.appear-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.appear-text.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.appear-text.delay-1 {
+    transition-delay: 0.3s;
+}
+
+.appear-image {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.appear-image.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Media Queries for Responsiveness - Adjust breakpoints as needed */
+@media (max-width: 768px) {
+    .about-content .container {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .content-left, .content-right {
+        text-align: center; /* Center text */
+    }
+}
+
+  
+  
